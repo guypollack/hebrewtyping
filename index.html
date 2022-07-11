@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="./styles.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="allowed-letters-and-keyboard-container">
+        <div class="allowed-letters-container">
+            <h3>Select which letters you want to learn</h3>
+            <div>
+                <button onclick="selectAll()">Select All</button>
+                <button onclick="deselectAll()">Deselect All</button>
+                <button onclick="randomSelection()">Random</button><br><br>
+            </div>
+            <div class="allowed-letters-boxes" dir="rtl">
+                <label for="alef-box" id="alef-box-label">א</label>
+                <input type="checkbox" id="alef-box" checked>
+                <label for="bet-box" id="bet-box-label">ב</label>
+                <input type="checkbox" id="bet-box" checked>
+                <label for="gimmel-box" id="gimmel-box-label">ג</label>
+                <input type="checkbox" id="gimmel-box" checked>
+                <label for="dalet-box" id="dalet-box-label">ד</label>
+                <input type="checkbox" id="dalet-box" checked>
+                <label for="hey-box" id="hey-box-label">ה</label>
+                <input type="checkbox" id="hey-box" checked>
+                <label for="vav-box" id="vav-box-label">ו</label>
+                <input type="checkbox" id="vav-box" checked>
+                <label for="zayin-box" id="zayin-box-label">ז</label>
+                <input type="checkbox" id="zayin-box" checked>
+                <label for="chet-box" id="chet-box-label">ח</label>
+                <input type="checkbox" id="chet-box" checked>
+                <label for="tet-box" id="tet-box-label">ט</label>
+                <input type="checkbox" id="tet-box" checked><br>
+
+                <label for="yud-box" id="yud-box-label">י</label>
+                <input type="checkbox" id="yud-box" checked>
+                <label for="kaf-box" id="kaf-box-label">כ</label>
+                <input type="checkbox" id="kaf-box" checked>
+                <label for="final-kaf-box" id="final-chaf-box-label">ך</label>
+                <input type="checkbox" id="final-chaf-box" checked>
+                <label for="lamed-box" id="lamed-box-label">ל</label>
+                <input type="checkbox" id="lamed-box" checked>
+                <label for="mem-box" id="mem-box-label">מ</label>
+                <input type="checkbox" id="mem-box" checked>
+                <label for="final=mem-box" id="final-mem-box-label">ם</label>
+                <input type="checkbox" id="final-mem-box" checked>
+                <label for="nun-box" id="nun-box-label">נ</label>
+                <input type="checkbox" id="nun-box" checked>
+                <label for="final-nun-box" id="final-nun-box-label">ן</label>
+                <input type="checkbox" id="final-nun-box" checked>
+                <label for="samech-box" id="samech-box-label">ס</label>
+                <input type="checkbox" id="samech-box" checked><br>
+
+                <label for="ayin-box" id="ayin-box-label">ע</label>
+                <input type="checkbox" id="ayin-box" checked>
+                <label for="pey-box" id="pey-box-label">פ</label>
+                <input type="checkbox" id="pey-box" checked>        
+                <label for="final-fey-box" id="final-fey-box-label">ף</label>
+                <input type="checkbox" id="final-fey-box" checked>        
+                <label for="tzadi-box" id="tzadi-box-label">צ</label>
+                <input type="checkbox" id="tzadi-box" checked>
+                <label for="final-tzadi-box" id="final-tzadi-box-label">ץ</label>
+                <input type="checkbox" id="final-tzadi-box" checked>
+                <label for="kuf-box" id="kuf-box-label">ק</label>
+                <input type="checkbox" id="kuf-box" checked>
+                <label for="reish-box" id="reish-box-label">ר</label>
+                <input type="checkbox" id="reish-box" checked>
+                <label for="shin-box" id="shin-box-label">ש</label>
+                <input type="checkbox" id="shin-box" checked>
+                <label for="taf-box" id="taf-box-label">ת</label>
+                <input type="checkbox" id="taf-box" checked><br><br>
+            </div>
+        </div>
+        <div class="keyboard-container" dir="rtl">
+            <div class="line-1">
+                <div class="keyboard-letter-container" id="pey-container">
+                    <h1 class="keyboard-letter">פ</h1>
+                    <p class="keyboard-super">P</p>
+                </div>
+                <div class="keyboard-letter-container" id="final-mem-container">
+                    <h1 class="keyboard-letter">ם</h1>
+                    <p class="keyboard-super">O</p>
+                </div>
+                <div class="keyboard-letter-container" id="final-nun-container">
+                    <h1 class="keyboard-letter">ן</h1>
+                    <p class="keyboard-super">I</p>
+                </div>
+                <div class="keyboard-letter-container" id="vav-container">
+                    <h1 class="keyboard-letter">ו</h1>
+                    <p class="keyboard-super">U</p>
+                </div>
+                <div class="keyboard-letter-container" id="tet-container">
+                    <h1 class="keyboard-letter">ט</h1>
+                    <p class="keyboard-super">Y</p>
+                </div>
+                <div class="keyboard-letter-container" id="alef-container">
+                    <h1 class="keyboard-letter">א</h1>
+                    <p class="keyboard-super">T</p>
+                </div>
+                <div class="keyboard-letter-container" id="reish-container">
+                    <h1 class="keyboard-letter">ר</h1>
+                    <p class="keyboard-super">R</p>
+                </div>
+                <div class="keyboard-letter-container" id="kuf-container">
+                    <h1 class="keyboard-letter">ק</h1>
+                    <p class="keyboard-super">E</p>
+                </div>
+                <br>
+            </div>
+            <div class="line-2">
+                <div class="keyboard-letter-container" id="final-fey-container">
+                    <h1 class="keyboard-letter">ף</h1>
+                    <p class="keyboard-super">;</p>
+                </div>
+                <div class="keyboard-letter-container" id="final-chaf-container">
+                    <h1 class="keyboard-letter">ך</h1>
+                    <p class="keyboard-super">L</p>
+                </div>
+                <div class="keyboard-letter-container" id="lamed-container">
+                    <h1 class="keyboard-letter">ל</h1>
+                    <p class="keyboard-super">K</p>
+                </div>
+                <div class="keyboard-letter-container" id="chet-container">
+                    <h1 class="keyboard-letter">ח</h1>
+                    <p class="keyboard-super">J</p>
+                </div>
+                <div class="keyboard-letter-container" id="yud-container">
+                    <h1 class="keyboard-letter">י</h1>
+                    <p class="keyboard-super">H</p>
+                </div>
+                <div class="keyboard-letter-container" id="ayin-container">
+                    <h1 class="keyboard-letter">ע</h1>
+                    <p class="keyboard-super">G</p>
+                </div>
+                <div class="keyboard-letter-container" id="kaf-container">
+                    <h1 class="keyboard-letter">כ</h1>
+                    <p class="keyboard-super">F</p>
+                </div>
+                <div class="keyboard-letter-container" id="gimmel-container">
+                    <h1 class="keyboard-letter">ג</h1>
+                    <p class="keyboard-super">D</p>
+                </div>
+                <div class="keyboard-letter-container" id="dalet-container">
+                    <h1 class="keyboard-letter">ד</h1>
+                    <p class="keyboard-super">S</p>
+                </div>
+                <div class="keyboard-letter-container" id="shin-container">
+                    <h1 class="keyboard-letter">ש</h1>
+                    <p class="keyboard-super">A</p>
+                </div>
+                <br>
+            </div>
+            <div class="line-3">
+                <div class="keyboard-letter-container" id="final-tzadi-container">
+                    <h1 class="keyboard-letter">ץ</h1>
+                    <p class="keyboard-super">.</p>
+                </div>
+                <div class="keyboard-letter-container" id="taf-container">
+                    <h1 class="keyboard-letter">ת</h1>
+                    <p class="keyboard-super">,</p>
+                </div>
+                <div class="keyboard-letter-container" id="tzadi-container">
+                    <h1 class="keyboard-letter">צ</h1>
+                    <p class="keyboard-super">M</p>
+                </div>
+                <div class="keyboard-letter-container" id="mem-container">
+                    <h1 class="keyboard-letter">מ</h1>
+                    <p class="keyboard-super">N</p>
+                </div>
+                <div class="keyboard-letter-container" id="nun-container">
+                    <h1 class="keyboard-letter">נ</h1>
+                    <p class="keyboard-super">B</p>
+                </div>
+                <div class="keyboard-letter-container" id="hey-container">
+                    <h1 class="keyboard-letter">ה</h1>
+                    <p class="keyboard-super">V</p>
+                </div>
+                <div class="keyboard-letter-container" id="bet-container">
+                    <h1 class="keyboard-letter">ב</h1>
+                    <p class="keyboard-super">C</p>
+                </div>
+                <div class="keyboard-letter-container" id="samech-container">
+                    <h1 class="keyboard-letter">ס</h1>
+                    <p class="keyboard-super">X</p>
+                </div>
+                <div class="keyboard-letter-container" id="zayin-container">
+                    <h1 class="keyboard-letter">ז</h1>
+                    <p class="keyboard-super">Z</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="show-english-and-keyboard-container">
+        <div class="show-english-container">
+            <label for="show-hide-english">Show English</label>
+            <input type="checkbox" name="show-english" id="show-english" onclick="showHideEnglish()" unchecked>
+            <label id="example">Example:</label><br>
+            <!--button onclick="showHideEnglish()">Show/Hide English</button-->
+            <br>
+            <br>
+        </div>
+        <div class="letter-container-ex" id="example-letter" dir="rtl">
+            <h1 class="letter-ex">א</h1>
+            <p class="super-ex">T</p>
+        </div>
+        <div class="show-keyboard-container">
+            <label for="show-keyboard">Show Keyboard</label>
+            <input type="checkbox" name="show-keyboard" id="show-keyboard" onclick="showHideKeyboard()"><br>
+            <label for="show-english-keyboard">Show English Keyboard</label>
+            <input type="checkbox" name="show-english-keyboard" id="show-english-keyboard" onclick="showHideEnglishKeyboard()">
+            
+            <!--button onclick="showHideEnglish()">Show/Hide English</button-->
+        </div>
+    </div>
+    <div class="generate-button-container">
+        <h3>Click 'Generate Sentence' to test yourself</h3>
+        <button id="generate-button" onclick="generateSentence()">Generate Sentence</button><br><br>
+    </div>
+    <div>
+        <h2 id="mistakes"></h2>
+    </div>
+    <div class="text-container" id="text-container" dir="rtl">
+        <!--div class="word">
+            <div class="letter-container" id="1">
+                <h1 class="letter">א</h1>
+                <p class="super">T</p>
+            </div>
+            <div class="letter-container" id="2">
+                <h1 class="letter">ב</h1>
+                <p class="super">C</p>
+            </div>
+            <div class="letter-container" id="3">
+                <h1 class="letter">א</h1>
+                <p class="super">T</p>
+            </div>
+        </div>
+        <div class="word">
+            <div class="letter-container" id="4">
+                <h1 class="letter">א</h1>
+                <p class="super">T</p>
+            </div>
+            <div class="letter-container" id="5">
+                <h1 class="letter">נ</h1>
+                <p class="super">B</p>
+            </div>
+            <div class="letter-container" id="6">
+                <h1 class="letter">י</h1>
+                <p class="super">H</p>
+            </div>
+        </div>
+        <div class="word">
+            <div class="letter-container" id="7">
+                <h1 class="letter">ר</h1>
+                <p class="super">R</p>
+            </div>
+            <div class="letter-container" id="8">
+                <h1 class="letter">ו</h1>
+                <p class="super">U</p>
+            </div>
+            <div class="letter-container" id="9">
+                <h1 class="letter">צ</h1>
+                <p class="super">M</p>
+            </div>
+            <div class="letter-container" id="10">
+                <h1 class="letter">ה</h1>
+                <p class="super">V</p>
+            </div>
+        </div>
+        <div class="word">
+            <div class="letter-container" id="11">
+                <h1 class="letter">ג</h1>
+                <p class="super">D</p>
+            </div>
+            <div class="letter-container" id="12">
+                <h1 class="letter">ל</h1>
+                <p class="super">K</p>
+            </div>
+            <div class="letter-container" id="13">
+                <h1 class="letter">י</h1>
+                <p class="super">H</p> 
+            </div>
+            <div class="letter-container" id="14">
+                <h1 class="letter">ד</h1>
+                <p class="super">S</p>
+            </div>
+            <div class="letter-container" id="15">
+                <h1 class="letter">ה</h1>
+                <p class="super">V</p>
+            </div>
+        </div>
+        <div class="word">
+            <div class="letter-container" id="16">
+                <h1 class="letter">ב</h1>
+                <p class="super">C</p>
+            </div>
+            <div class="letter-container" id="17">
+                <h1 class="letter">ב</h1>
+                <p class="super">C</p>     
+            </div>
+            <div class="letter-container" id="18">
+                <h1 class="letter">ק</h1>
+                <p class="super">E</p>   
+            </div>
+            <div class="letter-container" id="19">
+                <h1 class="letter">ש</h1>
+                <p class="super">A</p>   
+            </div>
+            <div class="letter-container" id="20">
+                <h1 class="letter">ה</h1>
+                <p class="super">V</p>    
+            </div>
+        </div-->
+    </div>
+    <div class="results-container" id="results-container">
+    </div>
+    <div class="mistakes-stats-container" id="mistakes-stats-container">
+    </div>
+    <script src="./main.js"></script>
+    <!--script src="./words.js"></script--z>
+</body>
+</html>
