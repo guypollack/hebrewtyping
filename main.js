@@ -183,20 +183,31 @@ document.body.addEventListener("keyup", function(event) {
     }
 });
 
-//Keyboard lighting functions
+//Keyboard populating and lighting functions
+function populateKeyboard() {
+    const allHebrewLetters = document.querySelectorAll(".keyboard-letter");
+    for (elem of allHebrewLetters) {
+        elem.parentElement.lastElementChild.innerHTML = translateToEnglish(elem.innerHTML);
+    }
+}
+
+
 function lightUp(letter) {
     const allHebrewLetters = document.querySelectorAll(".keyboard-letter");
     for (elem of allHebrewLetters) {
-        if (letter === elem.innerHTML) {
-            elem.parentElement.setAttribute("style","background-color:MediumOrchid");
+        if (elem.innerHTML === letter) {
+            elem.parentNode.style.backgroundColor = "MediumOrchid";
+            console.log(elem.parentNode.lastElementChild.innerHTML);
         }
     }
 }
 
+document.getElementById("mistakes").parentElement.child
+
 function unlight(letter) {
     const allHebrewLetters = document.querySelectorAll(".keyboard-letter");
     for (elem of allHebrewLetters) {
-        if (letter === elem.innerHTML) {
+        if (elem.innerHTML === letter) {
             elem.parentElement.setAttribute("style","background-color:gray");
         }
     }
@@ -327,6 +338,8 @@ let mistakesDict = createMistakesDict();
 let startTime = 0;
 
 let endTime = 0;
+
+populateKeyboard();
 
 function findAllowedLetters() {
     let allowedLetters = [];
