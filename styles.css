@@ -58,9 +58,9 @@ body {
   margin-left: 20px;
 }
 
-.show-english-and-keyboard-container {
+.toggle-english-and-keyboard-container {
   display: grid;
-  grid-template-columns: 240px 80px 500px;
+  grid-template-columns: 240px 80px 250px 200px;
   margin-top: 10px;
   align-items:flex-start ;
   border-bottom: 1px solid black;
@@ -120,7 +120,6 @@ h1, .keyboard-letter {
   width: 50px;
 }
 
-
 .super, .super-ex, .keyboard-super {
   vertical-align: super;
   color: white;
@@ -148,6 +147,8 @@ h1, h2, h3, p, label {
   font-family: 'Cousine';
 }
 
-.mistakes-stats-container {
-  width: 210px;
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
 }
