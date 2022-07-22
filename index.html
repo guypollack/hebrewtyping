@@ -195,7 +195,9 @@
         <div class="toggle-english-container">
             <label for="toggle-hide-english">Show English</label>
             <input type="checkbox" name="toggle-english" id="toggle-english" onclick="toggleEnglish()" unchecked>
-            <label id="example">Example:</label><br>
+            <label id="example">Example:</label>
+            <br>
+            <br>
             <br>
             <br>
         </div>
@@ -209,6 +211,14 @@
             <label for="toggle-english-keyboard">Show English Keyboard</label>
             <input type="checkbox" name="toggle-english-keyboard" id="toggle-english-keyboard" onclick="toggleEnglishKeyboard()" unchecked>
         </div>
+        <div class="choose-keyboard-container">
+            <label for="keyboard-type">QWERTY</label>
+            <input type="radio" name="keyboard-type" id="QWERTY" onclick="changeKeyboard('QWERTY')" checked><br>
+            <label for="keyboard-type">QWERTZ</label>
+            <input type="radio" name="keyboard-type" id="QWERTZ" onclick="changeKeyboard('QWERTZ')" unchecked><br>
+            <label for="keyboard-type">AZERTY</label>
+            <input type="radio" name="keyboard-type" id="AZERTY" onclick="changeKeyboard('AZERTY')" unchecked><br>
+        </div>
     </div>
     <div class="generate-button-container">
         <h3>Click 'Generate Sentence' to test yourself</h3>
@@ -219,9 +229,11 @@
     </div>
     <div class="text-container" id="text-container" dir="rtl">
     </div>
-    <div class="results-container" id="results-container">
-    </div>
-    <div class="mistakes-stats-container" id="mistakes-stats-container">
+    <div class="grid-container">
+        <div class="results-container" id="results-container">
+        </div>
+        <div class="mistakes-stats-container" id="mistakes-stats-container">
+        </div>
     </div>
     <script src="./main.js"></script>
 </body>
