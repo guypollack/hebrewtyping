@@ -54,633 +54,138 @@ function changeKeyboard(type) {
 //Translation functions
 
 const translateToHebrew = {
-    "QWERTY": {
-        "t": "א",
-        "c": "ב",
-        "d": "ג",
-        "s": "ד",
-        "v": "ה",
-        "u": "ו",
-        "z": "ז",
-        "j": "ח",
-        "y": "ט",
-        "h": "י",
-        "f": "כ",
-        "l": "ך",
-        "k": "ל",
-        "n": "מ",
-        "o": "ם",
-        "b": "נ",
-        "i": "ן",
-        "x": "ס",
-        "g": "ע",
-        "p": "פ",
-        ";": "ף",
-        "m": "צ",
-        ".": "ץ",
-        "e": "ק",
-        "r": "ר",
-        "a": "ש",
-        ",": "ת"
-    },
-    "QWERTZ": {
-        "t": "א",
-        "c": "ב",
-        "d": "ג",
-        "s": "ד",
-        "v": "ה",
-        "u": "ו",
-        "y": "ז",
-        "j": "ח",
-        "z": "ט",
-        "h": "י",
-        "f": "כ",
-        "l": "ך",
-        "k": "ל",
-        "n": "מ",
-        "o": "ם",
-        "b": "נ",
-        "i": "ן",
-        "x": "ס",
-        "g": "ע",
-        "p": "פ",
-        "ö": "ף",
-        "m": "צ",
-        ".": "ץ",
-        "e": "ק",
-        "r": "ר",
-        "a": "ש",
-        ",": "ת"
-    },
-    "AZERTY": {
-        "t": "א",
-        "c": "ב",
-        "d": "ג",
-        "s": "ד",
-        "v": "ה",
-        "u": "ו",
-        "w": "ז",
-        "j": "ח",
-        "y": "ט",
-        "h": "י",
-        "f": "כ",
-        "l": "ך",
-        "k": "ל",
-        "n": "מ",
-        "o": "ם",
-        "b": "נ",
-        "i": "ן",
-        "x": "ס",
-        "g": "ע",
-        "p": "פ",
-        "m": "ף",
-        ",": "צ",
-        ":": "ץ",
-        "e": "ק",
-        "r": "ר",
-        "q": "ש",
-        ";": "ת"
-    }         
+    "KeyT": "א",
+    "KeyC": "ב",
+    "KeyD": "ג",
+    "KeyS": "ד",
+    "KeyV": "ה",
+    "KeyU": "ו",
+    "KeyZ": "ז",
+    "KeyJ": "ח",
+    "KeyY": "ט",
+    "KeyH": "י",
+    "KeyF": "כ",
+    "KeyL": "ך",
+    "KeyK": "ל",
+    "KeyN": "מ",
+    "KeyO": "ם",
+    "KeyB": "נ",
+    "KeyI": "ן",
+    "KeyX": "ס",
+    "KeyG": "ע",
+    "KeyP": "פ",
+    "Semicolon": "ף",
+    "KeyM": "צ",
+    "Period": "ץ",
+    "KeyE": "ק",
+    "KeyR": "ר",
+    "KeyA": "ש",
+    "Comma": "ת"
 }
-
-/*
-function translateToHebrew(letter) {
-    switch (letter.toLowerCase()) {
-        case "t":
-            return "א";
-        case "c":
-            return "ב";
-        case "d":
-            return "ג";
-        case "s":
-            return "ד";
-        case "v":
-            return "ה";
-        case "u":
-            return "ו";
-        case "z":
-            return "ז";
-        case "j":
-            return "ח";
-        case "y":
-            return "ט";
-        case "h":
-            return "י";
-        case "f":
-            return "כ";
-        case "l":
-            return "ך";
-        case "k":
-            return "ל";
-        case "n":
-            return "מ";
-        case "o":
-            return "ם";
-        case "b":
-            return "נ";
-        case "i":
-            return "ן";
-        case "x":
-            return "ס";
-        case "g":
-            return "ע";
-        case "p":
-            return "פ";
-        case ";":
-            return "ף";
-        case "m":
-            return "צ";
-        case ".":
-            return "ץ";
-        case "e":
-            return "ק";
-        case "r":
-            return "ר";
-        case "a":
-            return "ש";
-        case ",":
-            return "ת";
-        default:
-            return letter;
-    }
-}
-*/
 
 const translateFromHebrew = {
     "QWERTY": {
-        "א": "t",
-        "ב": "c",
-        "ג": "d",
-        "ד": "s",
-        "ה": "v",
-        "ו": "u",
-        "ז": "z",
-        "ח": "j",
-        "ט": "y",
-        "י": "h",
-        "כ": "f",
-        "ך": "l",
-        "ל": "k",
-        "מ": "n",
-        "ם": "o",
-        "נ": "b",
-        "ן": "i",
-        "ס": "x",
-        "ע": "g",
-        "פ": "p",
+        "א": "T",
+        "ב": "C",
+        "ג": "D",
+        "ד": "S",
+        "ה": "V",
+        "ו": "U",
+        "ז": "Z",
+        "ח": "J",
+        "ט": "Y",
+        "י": "H",
+        "כ": "F",
+        "ך": "L",
+        "ל": "K",
+        "מ": "N",
+        "ם": "O",
+        "נ": "B",
+        "ן": "I",
+        "ס": "X",
+        "ע": "G",
+        "פ": "P",
         "ף": ";",
-        "צ": "m",
+        "צ": "M",
         "ץ": ".",
-        "ק": "e",
-        "ר": "r",
-        "ש": "a",
+        "ק": "E",
+        "ר": "R",
+        "ש": "A",
         "ת": ","
     },
     "QWERTZ": {
-        "א": "t",
-        "ב": "c",
-        "ג": "d",
-        "ד": "s",
-        "ה": "v",
-        "ו": "u",
-        "ז": "y",
-        "ח": "j",
-        "ט": "z",
-        "י": "h",
-        "כ": "f",
-        "ך": "l",
-        "ל": "k",
-        "מ": "n",
-        "ם": "o",
-        "נ": "b",
-        "ן": "i",
-        "ס": "x",
-        "ע": "g",
-        "פ": "p",
-        "ף": "ö",
-        "צ": "m",
+        "א": "T",
+        "ב": "C",
+        "ג": "D",
+        "ד": "S",
+        "ה": "V",
+        "ו": "U",
+        "ז": "Y",
+        "ח": "J",
+        "ט": "Z",
+        "י": "H",
+        "כ": "F",
+        "ך": "L",
+        "ל": "K",
+        "מ": "N",
+        "ם": "O",
+        "נ": "B",
+        "ן": "I",
+        "ס": "X",
+        "ע": "G",
+        "פ": "P",
+        "ף": "Ö",
+        "צ": "M",
         "ץ": ".",
-        "ק": "e",
-        "ר": "r",
-        "ש": "a",
+        "ק": "E",
+        "ר": "R",
+        "ש": "A",
         "ת": ","
     },
     "AZERTY": {
-        "א": "t",
-        "ב": "c",
-        "ג": "d",
-        "ד": "s",
-        "ה": "v",
-        "ו": "u",
-        "ז": "w",
-        "ח": "j",
-        "ט": "y",
-        "י": "h",
-        "כ": "f",
-        "ך": "l",
-        "ל": "k",
-        "מ": "n",
-        "ם": "o",
-        "נ": "b",
-        "ן": "i",
-        "ס": "x",
-        "ע": "g",
-        "פ": "p",
-        "ף": "m",
+        "א": "T",
+        "ב": "C",
+        "ג": "D",
+        "ד": "S",
+        "ה": "V",
+        "ו": "U",
+        "ז": "W",
+        "ח": "J",
+        "ט": "Y",
+        "י": "H",
+        "כ": "F",
+        "ך": "L",
+        "ל": "K",
+        "מ": "N",
+        "ם": "O",
+        "נ": "B",
+        "ן": "I",
+        "ס": "X",
+        "ע": "G",
+        "פ": "P",
+        "ף": "M",
         "צ": ",",
         "ץ": ":",
-        "ק": "e",
-        "ר": "r",
-        "ש": "q",
+        "ק": "E",
+        "ר": "R",
+        "ש": "Q",
         "ת": ";"
     }         
 }
 
-/*
-    function translateFromHebrew(letter,keyboard) {
-        switch (keyboard) {
-            case "QWERTY":
-                switch (letter) {
-                    case "א":
-                        return "t";
-                    case "ב":
-                        return "c";
-                    case "ג":
-                        return "d";
-                    case "ד":
-                        return "s";
-                    case "ה":
-                        return "v";
-                    case "ו":
-                        return "u";
-                    case "ז":
-                        return "z";
-                    case "ח":
-                        return "j";
-                    case "ט":
-                        return "y";
-                    case "י":
-                        return "h";
-                    case "כ":
-                        return "f";
-                    case "ך":
-                        return "l";
-                    case "ל":
-                        return "k";
-                    case "מ":
-                        return "n";
-                    case "ם":
-                        return "o";
-                    case "נ":
-                        return "b";
-                    case "ן":
-                        return "i";
-                    case "ס":
-                        return "x";
-                    case "ע":
-                        return "g";
-                    case "פ":
-                        return "p";
-                    case "ף":
-                        return ";";
-                    case "צ":
-                        return "m";
-                    case "ץ":
-                        return ".";
-                    case "ק":
-                        return "e";
-                    case "ר":
-                        return "r";
-                    case "ש":
-                        return "a";
-                    case "ת":
-                        return ",";
-                    default:
-                        return letter;
-                };
-            case "QWERTZ":
-                switch (letter) {
-                    case "א":
-                        return "t";
-                    case "ב":
-                        return "c";
-                    case "ג":
-                        return "d";
-                    case "ד":
-                        return "s";
-                    case "ה":
-                        return "v";
-                    case "ו":
-                        return "u";
-                    case "ז":
-                        return "y";
-                    case "ח":
-                        return "j";
-                    case "ט":
-                        return "z";
-                    case "י":
-                        return "h";
-                    case "כ":
-                        return "f";
-                    case "ך":
-                        return "l";
-                    case "ל":
-                        return "k";
-                    case "מ":
-                        return "n";
-                    case "ם":
-                        return "o";
-                    case "נ":
-                        return "b";
-                    case "ן":
-                        return "i";
-                    case "ס":
-                        return "x";
-                    case "ע":
-                        return "g";
-                    case "פ":
-                        return "p";
-                    case "ף":
-                        return "ö";
-                    case "צ":
-                        return "m";
-                    case "ץ":
-                        return ".";
-                    case "ק":
-                        return "e";
-                    case "ר":
-                        return "r";
-                    case "ש":
-                        return "a";
-                    case "ת":
-                        return ",";
-                    default:
-                        return letter;
-                };
-            case "AZERTY":
-                switch (letter) {
-                    case "א":
-                        return "t";
-                    case "ב":
-                        return "c";
-                    case "ג":
-                        return "d";
-                    case "ד":
-                        return "s";
-                    case "ה":
-                        return "v";
-                    case "ו":
-                        return "u";
-                    case "ז":
-                        return "w";
-                    case "ח":
-                        return "j";
-                    case "ט":
-                        return "y";
-                    case "י":
-                        return "h";
-                    case "כ":
-                        return "f";
-                    case "ך":
-                        return "l";
-                    case "ל":
-                        return "k";
-                    case "מ":
-                        return "n";
-                    case "ם":
-                        return "o";
-                    case "נ":
-                        return "b";
-                    case "ן":
-                        return "i";
-                    case "ס":
-                        return "x";
-                    case "ע":
-                        return "g";
-                    case "פ":
-                        return "p";
-                    case "ף":
-                        return "m";
-                    case "צ":
-                        return ",";
-                    case "ץ":
-                        return ":";
-                    case "ק":
-                        return "e";
-                    case "ר":
-                        return "r";
-                    case "ש":
-                        return "q";
-                    case "ת":
-                        return ";";
-                    default:
-                        return letter;
-                };    
-        }
-    }
-}
-
-
-
-function translateFromHebrew(letter,keyboard) {
-    switch (keyboard) {
-        case "QWERTY":
-            switch (letter) {
-                case "א":
-                    return "t";
-                case "ב":
-                    return "c";
-                case "ג":
-                    return "d";
-                case "ד":
-                    return "s";
-                case "ה":
-                    return "v";
-                case "ו":
-                    return "u";
-                case "ז":
-                    return "z";
-                case "ח":
-                    return "j";
-                case "ט":
-                    return "y";
-                case "י":
-                    return "h";
-                case "כ":
-                    return "f";
-                case "ך":
-                    return "l";
-                case "ל":
-                    return "k";
-                case "מ":
-                    return "n";
-                case "ם":
-                    return "o";
-                case "נ":
-                    return "b";
-                case "ן":
-                    return "i";
-                case "ס":
-                    return "x";
-                case "ע":
-                    return "g";
-                case "פ":
-                    return "p";
-                case "ף":
-                    return ";";
-                case "צ":
-                    return "m";
-                case "ץ":
-                    return ".";
-                case "ק":
-                    return "e";
-                case "ר":
-                    return "r";
-                case "ש":
-                    return "a";
-                case "ת":
-                    return ",";
-                default:
-                    return letter;
-            };
-        case "QWERTZ":
-            switch (letter) {
-                case "א":
-                    return "t";
-                case "ב":
-                    return "c";
-                case "ג":
-                    return "d";
-                case "ד":
-                    return "s";
-                case "ה":
-                    return "v";
-                case "ו":
-                    return "u";
-                case "ז":
-                    return "y";
-                case "ח":
-                    return "j";
-                case "ט":
-                    return "z";
-                case "י":
-                    return "h";
-                case "כ":
-                    return "f";
-                case "ך":
-                    return "l";
-                case "ל":
-                    return "k";
-                case "מ":
-                    return "n";
-                case "ם":
-                    return "o";
-                case "נ":
-                    return "b";
-                case "ן":
-                    return "i";
-                case "ס":
-                    return "x";
-                case "ע":
-                    return "g";
-                case "פ":
-                    return "p";
-                case "ף":
-                    return "ö";
-                case "צ":
-                    return "m";
-                case "ץ":
-                    return ".";
-                case "ק":
-                    return "e";
-                case "ר":
-                    return "r";
-                case "ש":
-                    return "a";
-                case "ת":
-                    return ",";
-                default:
-                    return letter;
-            };
-        case "AZERTY":
-            switch (letter) {
-                case "א":
-                    return "t";
-                case "ב":
-                    return "c";
-                case "ג":
-                    return "d";
-                case "ד":
-                    return "s";
-                case "ה":
-                    return "v";
-                case "ו":
-                    return "u";
-                case "ז":
-                    return "w";
-                case "ח":
-                    return "j";
-                case "ט":
-                    return "y";
-                case "י":
-                    return "h";
-                case "כ":
-                    return "f";
-                case "ך":
-                    return "l";
-                case "ל":
-                    return "k";
-                case "מ":
-                    return "n";
-                case "ם":
-                    return "o";
-                case "נ":
-                    return "b";
-                case "ן":
-                    return "i";
-                case "ס":
-                    return "x";
-                case "ע":
-                    return "g";
-                case "פ":
-                    return "p";
-                case "ף":
-                    return "m";
-                case "צ":
-                    return ",";
-                case "ץ":
-                    return ":";
-                case "ק":
-                    return "e";
-                case "ר":
-                    return "r";
-                case "ש":
-                    return "q";
-                case "ת":
-                    return ";";
-                default:
-                    return letter;
-            };    
-    }
-}
-
-*/
-
 //Keypress events
 document.body.addEventListener("keypress", function(event) {
-    window.alert(event.code); // change translations to .code
-    window.alert(String.fromCharCode(event.code));
-    if (allLetters.includes(translateToHebrew[keyboardType][event.key.toLowerCase()])) {
-        lightUp(translateToHebrew[keyboardType][event.key.toLowerCase()]);
+    if (allLetters.includes(translateToHebrew[event.code])) {
+        lightUp(translateToHebrew[event.code]);
     }
     if (remainingLetters.length != 0) {
-        submitKeypress(event.key);
+        submitKeypress(event.code);
     }
 });
 
 document.body.addEventListener("keyup", function(event) {
-    if (allLetters.includes(translateToHebrew[keyboardType][event.key.toLowerCase()])) {
-        unlight(translateToHebrew[keyboardType][event.key.toLowerCase()]);
+    if (allLetters.includes(translateToHebrew[event.code])) {
+        unlight(translateToHebrew[event.code]);
     }
 });
 
@@ -688,7 +193,7 @@ document.body.addEventListener("keyup", function(event) {
 function populateKeyboard() {
     const allHebrewLetters = document.querySelectorAll(".keyboard-letter");
     for (elem of allHebrewLetters) {
-        elem.parentElement.lastElementChild.innerHTML = translateFromHebrew[keyboardType][elem.innerHTML].toUpperCase();
+        elem.parentElement.lastElementChild.innerHTML = translateFromHebrew[keyboardType][elem.innerHTML];
     }
 }
 
@@ -714,8 +219,8 @@ function unlight(letter) {
 }
 
 //Processing letter entry
-function submitKeypress(letter) {
-    if (translateToHebrew[keyboardType][letter] === remainingLetters[0].innerHTML) {
+function submitKeypress(key) {
+    if (translateToHebrew[key] === remainingLetters[0].innerHTML) {
         document.getElementById(`${lettersCount-remainingLetters.length+1}`).style.backgroundColor = "aquamarine";
         remainingLetters.shift();
     } else {
@@ -901,7 +406,7 @@ function createRandomString() {
 
 function generateSuperscriptLetters() {
     for (container of document.querySelectorAll(".letter-container")) {
-        container.children[1].innerHTML = translateFromHebrew[keyboardType][container.children[0].innerHTML].toUpperCase();
+        container.children[1].innerHTML = translateFromHebrew[keyboardType][container.children[0].innerHTML];
     }
 }
 
@@ -937,13 +442,12 @@ function generateSentence() {
                 letterContainer.setAttribute("class","letter-container");
                 letterContainer.setAttribute("id",numberOfLetters);
                 let hebrewLetter = letter;
-                let englishLetter = ""; //translateFromHebrew(hebrewLetter,keyboardType).toUpperCase();
                 let h1 = document.createElement("h1");
                 h1.setAttribute("class","letter");
                 h1.appendChild(document.createTextNode(hebrewLetter));
                 let p = document.createElement("p");
                 p.setAttribute("class","super");
-                p.appendChild(document.createTextNode(englishLetter));
+                p.appendChild(document.createTextNode(""));
                 letterContainer.appendChild(h1);
                 letterContainer.appendChild(p);
                 wordContainer.appendChild(letterContainer)
