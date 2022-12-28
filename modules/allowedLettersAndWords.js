@@ -1,4 +1,6 @@
+import { wordList } from "./wordList.js";
 import { initialValues } from "./initialValues.js";
+
 const { allLetters } = initialValues;
 
 export function findAllowedLetters() {
