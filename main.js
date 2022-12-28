@@ -35,30 +35,27 @@ document.body.addEventListener("keyup", function(event) {
 document.getElementById("select-all-button").addEventListener("click", selectAll);
 document.getElementById("deselect-all-button").addEventListener("click", deselectAll);
 document.getElementById("random-selection-button").addEventListener("click", randomSelection);
-document.getElementById("generate-button").addEventListener("click", () => {
-  resetMistakes();
-  startTime = Date.now();
-  generateSentence();
-  generateSuperscriptLetters(keyboardType);
-});
-document.getElementById("QWERTY").addEventListener("click", () => {
-  keyboardType = "QWERTY"
-  changeKeyboard(keyboardType);
-});
-document.getElementById("QWERTZ").addEventListener("click", () => {
-  keyboardType = "QWERTZ"
-  changeKeyboard(keyboardType);
-});
-document.getElementById("AZERTY").addEventListener("click", () => {
-  keyboardType = "AZERTY"
-  changeKeyboard(keyboardType);
-});
+document.getElementById("generate-button").addEventListener("click", handleGenerateButtonClick);
+document.getElementById("QWERTY").addEventListener("click", () => handleKeyboardTypeButtonClick("QWERTY"));
+document.getElementById("QWERTZ").addEventListener("click", () => handleKeyboardTypeButtonClick("QWERTZ"));
+document.getElementById("AZERTY").addEventListener("click", () => handleKeyboardTypeButtonClick("AZERTY"));
 document.getElementById("toggle-english").addEventListener("click", toggleEnglish);
 document.getElementById("toggle-keyboard").addEventListener("click", toggleKeyboard);
 document.getElementById("toggle-english-keyboard").addEventListener("click", toggleEnglishKeyboard);
 
-
 populateKeyboard(keyboardType);
+
+function handleKeyboardTypeButtonClick(type) {
+  keyboardType = type;
+  changeKeyboard(type);
+}
+
+function handleGenerateButtonClick() {
+  resetMistakes();
+  startTime = Date.now();
+  generateSentence();
+  generateSuperscriptLetters(keyboardType);
+}
 
 function resetMistakes() {
   mistakes = 0;
