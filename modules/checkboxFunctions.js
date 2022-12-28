@@ -1,4 +1,4 @@
-import { populateKeyboard } from "./modules/keyboardCreationAndLighting.js";
+import { populateKeyboard } from "./keyboardCreationAndLighting.js";
 import { generateSuperscriptLetters } from "./generateStringsAndLetters.js";
 
 export function selectAll() {
