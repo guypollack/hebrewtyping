@@ -1,15 +1,15 @@
-import { translateToHebrew, translateFromHebrew } from "./modules/translationDictionaries";
-import { wordList } from "./modules/wordList";
-import { megilla } from "./modules/megilla";
-import { selectAll, deselectAll, randomSelection, toggleEnglish, toggleKeyboard, toggleEnglishKeyboard, changeKeyboard } from "./modules/checkboxFunctions";
-import { populateKeyboard, lightUp, unlight } from "./modules/keyboardCreationAndLighting";
-import { submitKeypress } from "./modules/submitKeypress";
-import { clearWords, createMistakesDict } from "./modules/startOfGameFunctions";
-import { initialValues } from "./modules/initialValues";
-import { findAllowedLetters, findForbiddenLetters, findAllowedWords } from "./modules/allowedLettersAndWords";
-import { createRandomString, generateSuperscriptLetters, generateSentence } from "./modules/generateStringsAndLetters";
-import { resetResults, resetMistakes } from "./modules/resetFunctions";
-import { printResults, cleanMistakesDict, printMistakes } from "./modules/endOfGameFunctions";
+import { translateToHebrew, translateFromHebrew } from "./modules/translationDictionaries.js";
+import { wordList } from "./modules/wordList.js";
+import { megilla } from "./modules/megilla.js";
+import { selectAll, deselectAll, randomSelection, toggleEnglish, toggleKeyboard, toggleEnglishKeyboard, changeKeyboard } from "./modules/checkboxFunctions.js";
+import { populateKeyboard, lightUp, unlight } from "./modules/keyboardCreationAndLighting.js";
+import { submitKeypress } from "./modules/submitKeypress.js";
+import { clearWords, createMistakesDict } from "./modules/startOfGameFunctions.js";
+import { initialValues } from "./modules/initialValues.js";
+import { findAllowedLetters, findForbiddenLetters, findAllowedWords } from "./modules/allowedLettersAndWords.js";
+import { createRandomString, generateSuperscriptLetters, generateSentence } from "./modules/generateStringsAndLetters.js";
+import { resetResults, resetMistakes } from "./modules/resetFunctions.js";
+import { printResults, cleanMistakesDict, printMistakes } from "./modules/endOfGameFunctions.js";
 
 
 //Add Keypress event listeners
