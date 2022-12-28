@@ -1,3 +1,5 @@
+import { translateFromHebrew } from "./translationDictionaries.js";
+
 export function populateKeyboard() {
   const allHebrewLetters = document.querySelectorAll(".keyboard-letter");
   for (const elem of allHebrewLetters) {
