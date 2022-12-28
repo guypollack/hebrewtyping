@@ -26,7 +26,6 @@ export function generateSentence() {
   document.getElementById("generate-button").blur();
   clearWords();
   resetResults()
-  startTime = Date.now();
 
   let forbiddenLetters = findForbiddenLetters();
   let allowedWords = findAllowedWords(forbiddenLetters);

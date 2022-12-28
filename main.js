@@ -37,6 +37,7 @@ document.getElementById("deselect-all-button").addEventListener("click", deselec
 document.getElementById("random-selection-button").addEventListener("click", randomSelection);
 document.getElementById("generate-button").addEventListener("click", () => {
   resetMistakes();
+  startTime = Date.now();
   generateSentence();
   generateSuperscriptLetters(keyboardType);
 });
