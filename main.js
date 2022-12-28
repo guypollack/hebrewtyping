@@ -33,6 +33,9 @@ document.getElementById("select-all-button").addEventListener("click", selectAll
 document.getElementById("deselect-all-button").addEventListener("click", deselectAll);
 document.getElementById("random-selection-button").addEventListener("click", randomSelection);
 document.getElementById("generate-button").addEventListener("click", generateSentence);
+document.getElementById("QWERTY").addEventListener("click", () => changeKeyboard("QWERTY"));
+document.getElementById("QWERTZ").addEventListener("click", () => changeKeyboard("QWERTZ"));
+document.getElementById("AZERTY").addEventListener("click", () => changeKeyboard("AZERTY"));
 
 
 //Initialise variables
