@@ -1,0 +1,154 @@
+/* hebrew */
+@font-face {
+    font-family: 'Cousine';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/cousine/v25/d6lIkaiiRdih4SpP_SYvzBTu39hchw.woff2) format('woff2');
+    unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+  }
+
+  /* latin-ext */
+@font-face {
+    font-family: 'Cousine';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/cousine/v25/d6lIkaiiRdih4SpP_SovzBTu39hchw.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+
+  /* latin */
+@font-face {
+  font-family: 'Cousine';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/cousine/v25/d6lIkaiiRdih4SpP_SQvzBTu39g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+  min-width: 825px;
+}
+
+.allowed-letters-and-keyboard-container {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  align-items: center;
+  border-bottom: 1px solid black; 
+}
+
+.allowed-letters-container {
+  text-align: left;
+}
+
+.allowed-letters-container h3 {
+  line-height: 12pt;
+}
+
+.keyboard-container {
+  text-align: left;
+  margin-left: 10px;
+  visibility: hidden;
+}
+
+.line-1 {
+  margin-left: 60px;
+}
+
+.line-3 {
+  margin-left: 20px;
+}
+
+.toggle-english-and-keyboard-container {
+  display: grid;
+  grid-template-columns: 240px 80px 250px 200px;
+  margin-top: 10px;
+  align-items:flex-start ;
+  border-bottom: 1px solid black;
+}
+
+#example {
+  margin-left: 10px;
+}
+
+#example-letter {
+  display: inline-block;
+}
+
+.generate-button-container {
+  
+  border-bottom: 1px solid black;
+}
+
+.text-container {
+  margin-top: 40px;
+  width: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.text-container, .word {
+    display: flex;
+    justify-content: center;
+}
+
+.word {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.letter-container, .letter-container-ex {
+  background-color: gray;
+  height: 50px;
+  width: 50px;
+  margin-left: 5px;
+}
+
+.keyboard-letter-container {
+  height: 30px;
+  width: 30px;
+  background-color: gray;
+  display: inline-block;
+}
+
+h1, .keyboard-letter {
+  position: absolute;;
+  color: white;
+  font-size: 32pt;
+  text-align: center;
+  margin-top: 3px;
+  margin-right: -1px;
+  width: 50px;
+}
+
+.super, .super-ex, .keyboard-super {
+  vertical-align: super;
+  color: white;
+  font-size: 8pt;
+  position: absolute;
+  margin-top: 2px;
+  margin-right: 40px;
+  visibility: hidden;
+}
+
+.keyboard-letter {
+  font-size: 15pt;
+  width: auto;
+  margin-top: 8px;
+  margin-right: 2px;
+}
+
+.keyboard-super {
+  font-size: 12pt;
+  width: auto;
+  margin-right: 18px;
+}
+
+h1, h2, h3, p, label {
+  font-family: 'Cousine';
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
