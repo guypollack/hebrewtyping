@@ -2,6 +2,7 @@ import { findAllowedLetters, findForbiddenLetters, findAllowedWords } from "./al
 import { clearWords } from "./startOfGameFunctions.js";
 import { resetResults, resetMistakes } from "./resetFunctions.js";
 import { toggleEnglish } from "./checkboxFunctions.js";
+import { translateFromHebrew } from "./translationDictionaries.js";
 
 export function createRandomString() {
   const allowedLetters = findAllowedLetters();
@@ -15,9 +16,9 @@ export function createRandomString() {
   return randomString;
 }
 
-export function generateSuperscriptLetters() {
+export function generateSuperscriptLetters(type) {
   for (const container of document.querySelectorAll(".letter-container")) {
-      container.children[1].innerHTML = translateFromHebrew[keyboardType][container.children[0].innerHTML];
+      container.children[1].innerHTML = translateFromHebrew[type][container.children[0].innerHTML];
   }
 }
 

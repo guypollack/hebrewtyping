@@ -11,6 +11,9 @@ import { createRandomString, generateSuperscriptLetters, generateSentence } from
 import { resetResults, resetMistakes } from "./modules/resetFunctions.js";
 import { printResults, cleanMistakesDict, printMistakes } from "./modules/endOfGameFunctions.js";
 
+//Initialise variables
+const { allLetters } = initialValues;
+let { lettersCount, remainingLetters, englishOn, keyboardType, mistakes, mistakesDict, startTime, endTime } = initialValues;
 
 //Add Keypress event listeners
 document.body.addEventListener("keypress", function(event) {
@@ -33,15 +36,21 @@ document.getElementById("select-all-button").addEventListener("click", selectAll
 document.getElementById("deselect-all-button").addEventListener("click", deselectAll);
 document.getElementById("random-selection-button").addEventListener("click", randomSelection);
 document.getElementById("generate-button").addEventListener("click", generateSentence);
-document.getElementById("QWERTY").addEventListener("click", () => changeKeyboard("QWERTY"));
-document.getElementById("QWERTZ").addEventListener("click", () => changeKeyboard("QWERTZ"));
-document.getElementById("AZERTY").addEventListener("click", () => changeKeyboard("AZERTY"));
+document.getElementById("QWERTY").addEventListener("click", () => {
+  keyboardType = "QWERTY"
+  changeKeyboard(keyboardType);
+});
+document.getElementById("QWERTZ").addEventListener("click", () => {
+  keyboardType = "QWERTZ"
+  changeKeyboard(keyboardType);
+});
+document.getElementById("AZERTY").addEventListener("click", () => {
+  keyboardType = "AZERTY"
+  changeKeyboard(keyboardType);
+});
 document.getElementById("toggle-english").addEventListener("click", toggleEnglish);
 document.getElementById("toggle-keyboard").addEventListener("click", toggleKeyboard);
 document.getElementById("toggle-english-keyboard").addEventListener("click", toggleEnglishKeyboard);
 
-//Initialise variables
-const { allLetters } = initialValues;
-let { lettersCount, remainingLetters, englishOn, keyboardType, mistakes, mistakesDict, startTime, endTime } = initialValues;
 
-populateKeyboard();
+populateKeyboard(keyboardType);

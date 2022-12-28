@@ -47,8 +47,7 @@ export function toggleEnglishKeyboard() {
 }
 
 export function changeKeyboard(type) {
-  keyboardType = type;
-  populateKeyboard();
-  generateSuperscriptLetters();
+  populateKeyboard(type);
+  generateSuperscriptLetters(type);
   document.getElementById(type).blur();
 }
