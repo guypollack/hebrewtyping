@@ -1,6 +1,6 @@
 import { findAllowedLetters, findForbiddenLetters, findAllowedWords } from "./allowedLettersAndWords.js";
 import { clearWords } from "./startOfGameFunctions.js";
-import { resetResults, resetMistakes } from "./resetFunctions.js";
+import { resetResults } from "./resetFunctions.js";
 import { toggleEnglish } from "./checkboxFunctions.js";
 import { translateFromHebrew } from "./translationDictionaries.js";
 
@@ -26,7 +26,6 @@ export function generateSentence() {
   document.getElementById("generate-button").blur();
   clearWords();
   resetResults()
-  resetMistakes();
   startTime = Date.now();
 
   let forbiddenLetters = findForbiddenLetters();
@@ -74,7 +73,7 @@ export function generateSentence() {
               p.appendChild(document.createTextNode(""));
               letterContainer.appendChild(h1);
               letterContainer.appendChild(p);
-              wordContainer.appendChild(letterContainer)
+              wordContainer.appendChild(letterContainer);
           }             
       }            
   } else {
@@ -82,6 +81,5 @@ export function generateSentence() {
   }
   lettersCount = document.querySelectorAll(".letter").length;
   remainingLetters = Array.from(document.querySelectorAll(".letter"));
-  generateSuperscriptLetters();
   toggleEnglish();
 }

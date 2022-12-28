@@ -5,9 +5,7 @@ export function resetResults() {
   document.getElementById("results-container").innerHTML = "";
 }
 
-export function resetMistakes() {
-  mistakes = 0;
-  mistakesDict = createMistakesDict();
+export function resetMistakesHtml() {
   document.getElementById("mistakes").innerHTML = "";
   if (findForbiddenLetters().length < 27) {
       document.getElementById("mistakes").innerHTML = "Mistakes: 0";

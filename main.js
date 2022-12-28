@@ -8,7 +8,7 @@ import { clearWords, createMistakesDict } from "./modules/startOfGameFunctions.j
 import { initialValues } from "./modules/initialValues.js";
 import { findAllowedLetters, findForbiddenLetters, findAllowedWords } from "./modules/allowedLettersAndWords.js";
 import { createRandomString, generateSuperscriptLetters, generateSentence } from "./modules/generateStringsAndLetters.js";
-import { resetResults, resetMistakes } from "./modules/resetFunctions.js";
+import { resetResults, resetMistakesHtml } from "./modules/resetFunctions.js";
 import { printResults, cleanMistakesDict, printMistakes } from "./modules/endOfGameFunctions.js";
 
 //Initialise variables
@@ -35,7 +35,11 @@ document.body.addEventListener("keyup", function(event) {
 document.getElementById("select-all-button").addEventListener("click", selectAll);
 document.getElementById("deselect-all-button").addEventListener("click", deselectAll);
 document.getElementById("random-selection-button").addEventListener("click", randomSelection);
-document.getElementById("generate-button").addEventListener("click", generateSentence);
+document.getElementById("generate-button").addEventListener("click", () => {
+  resetMistakes();
+  generateSentence();
+  generateSuperscriptLetters(keyboardType);
+});
 document.getElementById("QWERTY").addEventListener("click", () => {
   keyboardType = "QWERTY"
   changeKeyboard(keyboardType);
@@ -54,3 +58,9 @@ document.getElementById("toggle-english-keyboard").addEventListener("click", tog
 
 
 populateKeyboard(keyboardType);
+
+function resetMistakes() {
+  mistakes = 0;
+  mistakesDict = createMistakesDict();
+  resetMistakesHtml();
+}
