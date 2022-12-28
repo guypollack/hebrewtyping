@@ -1,25 +1,25 @@
 //Button/checkbox functions
 function selectAll() {
-    for (box of document.querySelectorAll(".allowed-letters-boxes input[type='checkbox']")) {
+    for (const box of document.querySelectorAll(".allowed-letters-boxes input[type='checkbox']")) {
         box.checked = true;
     }
 }
 
 function deselectAll() {
-    for (box of document.querySelectorAll(".allowed-letters-boxes input[type='checkbox']")) {
+    for (const box of document.querySelectorAll(".allowed-letters-boxes input[type='checkbox']")) {
         box.checked = false;
     }
 }
 
 function randomSelection() {
-    for (box of document.querySelectorAll(".allowed-letters-boxes input[type='checkbox']")) {
+    for (const box of document.querySelectorAll(".allowed-letters-boxes input[type='checkbox']")) {
         box.checked = [true,false][Math.floor(Math.random()*2)];
     }
 }
 
 function toggleEnglish() {
     const setting = document.getElementById("toggle-english").checked === true ? "visible" : "hidden";
-    for (letter of document.querySelectorAll(".super")) {
+    for (const letter of document.querySelectorAll(".super")) {
         letter.style.visibility = setting;
     }
     const superEx = document.querySelector(".super-ex");
@@ -35,7 +35,7 @@ function toggleKeyboard() {
 
 function toggleEnglishKeyboard() {
     const setting = document.getElementById("toggle-english-keyboard").checked === true ? "visible" : "hidden";
-    for (letter of document.querySelectorAll(".keyboard-super")) {
+    for (const letter of document.querySelectorAll(".keyboard-super")) {
         letter.style.visibility = setting;
     }
     const toggleKeyboardButton = document.getElementById("toggle-keyboard");
@@ -192,14 +192,14 @@ document.body.addEventListener("keyup", function(event) {
 //Keyboard populating and lighting functions
 function populateKeyboard() {
     const allHebrewLetters = document.querySelectorAll(".keyboard-letter");
-    for (elem of allHebrewLetters) {
+    for (const elem of allHebrewLetters) {
         elem.parentElement.lastElementChild.innerHTML = translateFromHebrew[keyboardType][elem.innerHTML];
     }
 }
 
 function lightUp(letter) {
     const allHebrewLetters = document.querySelectorAll(".keyboard-letter");
-    for (elem of allHebrewLetters) {
+    for (const elem of allHebrewLetters) {
         if (elem.innerHTML === letter) {
             elem.parentNode.style.backgroundColor = "MediumOrchid";
             //console.log(elem.parentNode.lastElementChild.innerHTML);
@@ -211,7 +211,7 @@ function lightUp(letter) {
 
 function unlight(letter) {
     const allHebrewLetters = document.querySelectorAll(".keyboard-letter");
-    for (elem of allHebrewLetters) {
+    for (const elem of allHebrewLetters) {
         if (elem.innerHTML === letter) {
             elem.parentElement.setAttribute("style","background-color:gray");
         }
@@ -259,7 +259,7 @@ function printResults() {
 }
 
 function cleanMistakesDict() {
-    for (elem of Object.keys(mistakesDict)) {
+    for (const elem of Object.keys(mistakesDict)) {
         if (mistakesDict[elem] === 0) {
             delete mistakesDict[elem];
         }
@@ -274,7 +274,7 @@ function printMistakes() {
     if (Object.keys(mistakesDict).length > 0) {
         const mistakesStatsHeaderText = document.createTextNode("Mistake Stats:")
         mistakesStatsHeaderNode.appendChild(mistakesStatsHeaderText);
-        for (elem of Object.keys(mistakesDict)) {
+        for (const elem of Object.keys(mistakesDict)) {
             let mistakeStatNode = document.createElement("h3");
             let mistakesStatText = document.createTextNode(`${elem} : ${mistakesDict[elem]}`)
             mistakesStatsContainer.appendChild(mistakeStatNode);
@@ -321,7 +321,7 @@ function createMistakesDict() {
         "ש":"",
         "ת":""
     }
-    for (elem of Object.keys(mistakesDict)) {
+    for (const elem of Object.keys(mistakesDict)) {
         mistakesDict[elem] = 0;
     }
     return mistakesDict;
@@ -350,7 +350,7 @@ populateKeyboard();
 
 function findAllowedLetters() {
     let allowedLetters = [];
-    for (box of document.querySelectorAll(".allowed-letters-boxes input[type='checkbox']")) {
+    for (const box of document.querySelectorAll(".allowed-letters-boxes input[type='checkbox']")) {
         if (box.checked === true) {
             allowedLetters.push(document.getElementById(`${box.id}-label`).innerHTML);
         }
@@ -364,9 +364,9 @@ function findForbiddenLetters() {
 
 function findAllowedWords(forbiddenLetters) {
     let allowedWords = [];
-    for (word of wordList) {
+    for (const word of wordList) {
         allowed = true;
-        for (letter of word) {
+        for (const letter of word) {
             if (forbiddenLetters.includes(letter)) {
                 allowed = false;
             }
@@ -405,7 +405,7 @@ function createRandomString() {
 }
 
 function generateSuperscriptLetters() {
-    for (container of document.querySelectorAll(".letter-container")) {
+    for (const container of document.querySelectorAll(".letter-container")) {
         container.children[1].innerHTML = translateFromHebrew[keyboardType][container.children[0].innerHTML];
     }
 }
@@ -443,12 +443,12 @@ function generateSentence() {
             }
         }
 
-        for (word of wordArray) {
+        for (const word of wordArray) {
             let wordContainer = document.createElement("div");
             wordContainer.setAttribute("class","word");
             textContainer.appendChild(wordContainer);
 
-            for (letter of word) {
+            for (const letter of word) {
                 numberOfLetters++;
                 let letterContainer = document.createElement("div");
                 letterContainer.setAttribute("class","letter-container");

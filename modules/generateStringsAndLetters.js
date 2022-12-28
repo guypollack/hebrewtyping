@@ -11,7 +11,7 @@ export function createRandomString() {
 }
 
 export function generateSuperscriptLetters() {
-  for (container of document.querySelectorAll(".letter-container")) {
+  for (const container of document.querySelectorAll(".letter-container")) {
       container.children[1].innerHTML = translateFromHebrew[keyboardType][container.children[0].innerHTML];
   }
 }
@@ -49,12 +49,12 @@ export function generateSentence() {
           }
       }
 
-      for (word of wordArray) {
+      for (const word of wordArray) {
           let wordContainer = document.createElement("div");
           wordContainer.setAttribute("class","word");
           textContainer.appendChild(wordContainer);
 
-          for (letter of word) {
+          for (const letter of word) {
               numberOfLetters++;
               let letterContainer = document.createElement("div");
               letterContainer.setAttribute("class","letter-container");

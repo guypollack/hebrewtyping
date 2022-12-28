@@ -18,7 +18,7 @@ export function printResults() {
 }
 
 export function cleanMistakesDict() {
-  for (elem of Object.keys(mistakesDict)) {
+  for (const elem of Object.keys(mistakesDict)) {
       if (mistakesDict[elem] === 0) {
           delete mistakesDict[elem];
       }
@@ -33,7 +33,7 @@ export function printMistakes() {
   if (Object.keys(mistakesDict).length > 0) {
       const mistakesStatsHeaderText = document.createTextNode("Mistake Stats:")
       mistakesStatsHeaderNode.appendChild(mistakesStatsHeaderText);
-      for (elem of Object.keys(mistakesDict)) {
+      for (const elem of Object.keys(mistakesDict)) {
           let mistakeStatNode = document.createElement("h3");
           let mistakesStatText = document.createTextNode(`${elem} : ${mistakesDict[elem]}`)
           mistakesStatsContainer.appendChild(mistakeStatNode);

@@ -1,6 +1,6 @@
 export function findAllowedLetters() {
   let allowedLetters = [];
-  for (box of document.querySelectorAll(".allowed-letters-boxes input[type='checkbox']")) {
+  for (const box of document.querySelectorAll(".allowed-letters-boxes input[type='checkbox']")) {
       if (box.checked === true) {
           allowedLetters.push(document.getElementById(`${box.id}-label`).innerHTML);
       }
@@ -14,9 +14,9 @@ export function findForbiddenLetters() {
 
 export function findAllowedWords(forbiddenLetters) {
   let allowedWords = [];
-  for (word of wordList) {
+  for (const word of wordList) {
       allowed = true;
-      for (letter of word) {
+      for (const letter of word) {
           if (forbiddenLetters.includes(letter)) {
               allowed = false;
           }
