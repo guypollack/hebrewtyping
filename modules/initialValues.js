@@ -1,4 +1,4 @@
-import { createMistakesDict } from "./startOfGameFunctions";
+import { createMistakesDict } from "./startOfGameFunctions.js";
 
 export const initialValues = {
   allLetters: ["א","ב","ג","ד","ה","ו","ז","ח","ט","י","כ","ך","ל","מ","ם","נ","ן","ס","ע","פ","ף","צ","ץ","ק","ר","ש","ת"],
