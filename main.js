@@ -12,8 +12,7 @@ import { resetResults, resetMistakes } from "./modules/resetFunctions";
 import { printResults, cleanMistakesDict, printMistakes } from "./modules/endOfGameFunctions";
 
 
-//Add Keypress events
-
+//Add Keypress event listeners
 document.body.addEventListener("keypress", function(event) {
     if (allLetters.includes(translateToHebrew[event.code])) {
         lightUp(translateToHebrew[event.code]);
@@ -29,8 +28,14 @@ document.body.addEventListener("keyup", function(event) {
     }
 });
 
-//Initialise variables
+//Add OnClick event listeners
+document.getElementById("select-all-button").addEventListener("click", selectAll);
+document.getElementById("deselect-all-button").addEventListener("click", deselectAll);
+document.getElementById("random-selection-button").addEventListener("click", randomSelection);
+document.getElementById("generate-button").addEventListener("click", generateSentence);
 
+
+//Initialise variables
 const { allLetters } = initialValues;
 let { lettersCount, remainingLetters, englishOn, keyboardType, mistakes, mistakesDict, startTime, endTime } = initialValues;
 

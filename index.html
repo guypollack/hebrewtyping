@@ -10,9 +10,9 @@
         <div class="allowed-letters-container">
             <h3>Select which letters you want to learn</h3>
             <div>generateSentence
-                <button onclick="selectAll()">Select All</button>
-                <button onclick="deselectAll()">Deselect All</button>
-                <button onclick="randomSelection()">Random</button><br><br>
+                <button id="select-all-button">Select All</button>
+                <button id="deselect-all-button">Deselect All</button>
+                <button id="random-selection-button">Random</button><br><br>
             </div>
             <div class="allowed-letters-boxes" dir="rtl">
                 <label for="alef-box" id="alef-box-label">א</label>
@@ -223,7 +223,7 @@
     </div>
     <div class="generate-button-container">
         <h3>Click 'Generate Sentence' to test yourself</h3>
-        <button id="generate-button" onclick="generateSentence()">Generate Sentence</button><br><br>
+        <button id="generate-button">Generate Sentence</button><br><br>
     </div>
     <div>
         <h2 id="mistakes"></h2>
