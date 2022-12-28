@@ -36,7 +36,9 @@ document.getElementById("generate-button").addEventListener("click", generateSen
 document.getElementById("QWERTY").addEventListener("click", () => changeKeyboard("QWERTY"));
 document.getElementById("QWERTZ").addEventListener("click", () => changeKeyboard("QWERTZ"));
 document.getElementById("AZERTY").addEventListener("click", () => changeKeyboard("AZERTY"));
-
+document.getElementById("toggle-english").addEventListener("click", toggleEnglish);
+document.getElementById("toggle-keyboard").addEventListener("click", toggleKeyboard);
+document.getElementById("toggle-english-keyboard").addEventListener("click", toggleEnglishKeyboard);
 
 //Initialise variables
 const { allLetters } = initialValues;
