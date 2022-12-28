@@ -1,3 +1,6 @@
+import { populateKeyboard } from "./modules/keyboardCreationAndLighting.js";
+import { generateSuperscriptLetters } from "./generateStringsAndLetters.js";
+
 export function selectAll() {
   for (const box of document.querySelectorAll(".allowed-letters-boxes input[type='checkbox']")) {
       box.checked = true;

@@ -1,3 +1,6 @@
+import { initialValues } from "./initialValues.js";
+const { allLetters } = initialValues;
+
 export function findAllowedLetters() {
   let allowedLetters = [];
   for (const box of document.querySelectorAll(".allowed-letters-boxes input[type='checkbox']")) {

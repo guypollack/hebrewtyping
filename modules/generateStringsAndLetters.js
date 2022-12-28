@@ -1,3 +1,8 @@
+import { findAllowedLetters, findForbiddenLetters, findAllowedWords } from "./allowedLettersAndWords.js";
+import { clearWords } from "./startOfGameFunctions.js";
+import { resetResults, resetMistakes } from "./resetFunctions.js";
+import { toggleEnglish } from "./checkboxFunctions.js";
+
 export function createRandomString() {
   const allowedLetters = findAllowedLetters();
   const stringLength = Math.floor(Math.random()*6) + 1;

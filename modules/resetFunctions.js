@@ -1,3 +1,6 @@
+import { createMistakesDict } from "./startOfGameFunctions.js";
+import { findForbiddenLetters } from "./allowedLettersAndWords.js"
+
 export function resetResults() {
   document.getElementById("results-container").innerHTML = "";
 }

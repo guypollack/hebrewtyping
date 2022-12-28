@@ -1,3 +1,6 @@
+import { translateToHebrew } from "./translationDictionaries.js";
+import { printResults, cleanMistakesDict, printMistakes } from "./endOfGameFunctions.js";
+
 export function submitKeypress(key) {
   if (translateToHebrew[key] === remainingLetters[0].innerHTML) {
       document.getElementById(`${lettersCount-remainingLetters.length+1}`).style.backgroundColor = "aquamarine";
