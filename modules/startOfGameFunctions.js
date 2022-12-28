@@ -32,7 +32,7 @@ export function createMistakesDict() {
       "ש":"",
       "ת":""
   }
-  for (elem of Object.keys(mistakesDict)) {
+  for (const elem of Object.keys(mistakesDict)) {
       mistakesDict[elem] = 0;
   }
   return mistakesDict;
