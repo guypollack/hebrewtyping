@@ -3,6 +3,7 @@ import { clearWords } from "./startOfGameFunctions.js";
 import { resetResults } from "./resetFunctions.js";
 import { toggleEnglish } from "./checkboxFunctions.js";
 import { translateFromHebrew } from "./translationDictionaries.js";
+import { megilla } from "./megilla.js";
 
 export function createRandomString() {
   const allowedLetters = findAllowedLetters();
