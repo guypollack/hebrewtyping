@@ -3,7 +3,6 @@ import { wordList } from "./modules/wordList.js";
 import { megilla } from "./modules/megilla.js";
 import { selectAll, deselectAll, randomSelection, toggleEnglish, toggleKeyboard, toggleEnglishKeyboard, changeKeyboard } from "./modules/checkboxFunctions.js";
 import { populateKeyboard, lightUp, unlight } from "./modules/keyboardCreationAndLighting.js";
-import { submitKeypress } from "./modules/submitKeypress.js";
 import { clearWords, createMistakesDict } from "./modules/startOfGameFunctions.js";
 import { initialValues } from "./modules/initialValues.js";
 import { findAllowedLetters, findForbiddenLetters, findAllowedWords } from "./modules/allowedLettersAndWords.js";
