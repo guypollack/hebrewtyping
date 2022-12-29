@@ -8,7 +8,7 @@ import { initialValues } from "./modules/initialValues.js";
 import { findAllowedLetters, findForbiddenLetters, findAllowedWords } from "./modules/allowedLettersAndWords.js";
 import { createRandomString, generateSuperscriptLetters, generateSentence } from "./modules/generateStringsAndLetters.js";
 import { resetResults, resetMistakesHtml } from "./modules/resetFunctions.js";
-import { printResults, cleanMistakesDict, printMistakes } from "./modules/endOfGameFunctions.js";
+import { printResults, printMistakes } from "./modules/endOfGameFunctions.js";
 
 //Initialise variables
 const { allLetters } = initialValues;
@@ -89,7 +89,7 @@ function submitKeypress(key) {
   }
 }
 
-export function cleanMistakesDict() {
+function cleanMistakesDict() {
   for (const elem of Object.keys(mistakesDict)) {
       if (mistakesDict[elem] === 0) {
           delete mistakesDict[elem];
