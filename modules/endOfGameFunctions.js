@@ -1,5 +1,4 @@
-export function printResults() {
-  endTime = Date.now();
+export function printResults(startTime, endTime) {
 
       const timeTaken = Math.round((endTime-startTime) / 10) / 100;
       const lettersTyped = document.querySelectorAll(".letter").length;
@@ -17,15 +16,7 @@ export function printResults() {
       document.getElementById("results-container").appendChild(document.createElement("h3")).appendChild(document.createTextNode(`Words per minute: ${wpm}`));
 }
 
-export function cleanMistakesDict() {
-  for (const elem of Object.keys(mistakesDict)) {
-      if (mistakesDict[elem] === 0) {
-          delete mistakesDict[elem];
-      }
-  }
-}
-
-export function printMistakes() {
+export function printMistakes(mistakesDict) {
   const mistakesStatsContainer = document.getElementById("mistakes-stats-container");
   const mistakesStatsHeaderNode = document.createElement("h2");
   mistakesStatsContainer.appendChild(mistakesStatsHeaderNode);
