@@ -20,7 +20,7 @@ export function findForbiddenLetters() {
 export function findAllowedWords(forbiddenLetters) {
   let allowedWords = [];
   for (const word of wordList) {
-      allowed = true;
+      let allowed = true;
       for (const letter of word) {
           if (forbiddenLetters.includes(letter)) {
               allowed = false;
