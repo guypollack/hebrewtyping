@@ -69,12 +69,12 @@ function resetMistakes() {
   resetMistakesHtml();
 }
 
-function submitKeypress(key) {
-  if (translateToHebrew[key] === remainingLetters[0].innerHTML) {
+function submitKeypress(keyCode) {
+  if (translateToHebrew[keyCode] === remainingLetters[0].innerHTML) {
       document.getElementById(`${lettersCount-remainingLetters.length+1}`).style.backgroundColor = "aquamarine";
       remainingLetters.shift();
   } else {
-      if (letter != " ") {
+      if (keyCode != "Space") {
           mistakes++;
           document.getElementById("mistakes").innerHTML = `Mistakes: ${mistakes}`;
           mistakesDict[remainingLetters[0].innerHTML]++
