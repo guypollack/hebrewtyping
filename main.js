@@ -38,7 +38,7 @@ function handleKeyPress(event) {
     lightUp(translateToHebrew[event.code]);
   }
   if (remainingLetters.length != 0) {
-    submitKeypress(event.code);
+    submitKeyPress(event.code);
   }
 };
 
@@ -69,7 +69,7 @@ function resetMistakes() {
   resetMistakesHtml();
 }
 
-function submitKeypress(keyCode) {
+function submitKeyPress(keyCode) {
   if (translateToHebrew[keyCode] === remainingLetters[0].innerHTML) {
       document.getElementById(`${lettersCount-remainingLetters.length+1}`).style.backgroundColor = "aquamarine";
       remainingLetters.shift();
