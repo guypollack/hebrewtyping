@@ -15,21 +15,9 @@ import { printResults, cleanMistakesDict, printMistakes } from "./modules/endOfG
 const { allLetters } = initialValues;
 let { lettersCount, remainingLetters, englishOn, keyboardType, mistakes, mistakesDict, startTime, endTime } = initialValues;
 
-//Add Keypress event listeners
-document.body.addEventListener("keypress", function(event) {
-    if (allLetters.includes(translateToHebrew[event.code])) {
-        lightUp(translateToHebrew[event.code]);
-    }
-    if (remainingLetters.length != 0) {
-        submitKeypress(event.code);
-    }
-});
-
-document.body.addEventListener("keyup", function(event) {
-    if (allLetters.includes(translateToHebrew[event.code])) {
-        unlight(translateToHebrew[event.code]);
-    }
-});
+//Add KeyPress and KeyUp event listeners
+document.body.addEventListener("keypress", handleKeyPress);
+document.body.addEventListener("keyup", handleKeyUp);
 
 //Add OnClick event listeners
 document.getElementById("select-all-button").addEventListener("click", selectAll);
@@ -44,6 +32,22 @@ document.getElementById("toggle-keyboard").addEventListener("click", toggleKeybo
 document.getElementById("toggle-english-keyboard").addEventListener("click", toggleEnglishKeyboard);
 
 populateKeyboard(keyboardType);
+
+//Define event handlers
+function handleKeyPress(event) {
+  if (allLetters.includes(translateToHebrew[event.code])) {
+    lightUp(translateToHebrew[event.code]);
+  }
+  if (remainingLetters.length != 0) {
+    submitKeypress(event.code);
+  }
+};
+
+function handleKeyUp(event) {
+  if (allLetters.includes(translateToHebrew[event.code])) {
+    unlight(translateToHebrew[event.code]);
+  }
+}
 
 function handleKeyboardTypeButtonClick(type) {
   keyboardType = type;
