@@ -79,7 +79,4 @@ export function generateSentence() {
   } else {
       return;
   }
-  lettersCount = document.querySelectorAll(".letter").length;
-  remainingLetters = Array.from(document.querySelectorAll(".letter"));
-  toggleEnglish();
 }

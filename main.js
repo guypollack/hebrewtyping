@@ -55,6 +55,9 @@ function handleGenerateButtonClick() {
   startTime = Date.now();
   generateSentence();
   generateSuperscriptLetters(keyboardType);
+  lettersCount = document.querySelectorAll(".letter").length;
+  remainingLetters = Array.from(document.querySelectorAll(".letter"));
+  toggleEnglish();
 }
 
 function resetMistakes() {
