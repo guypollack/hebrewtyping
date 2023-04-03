@@ -81,7 +81,7 @@ body {
 
 .text-container {
   margin-top: 40px;
-  width: 90%;
+  width: 90vw;
   margin: auto;
   flex-wrap: wrap;
 }
